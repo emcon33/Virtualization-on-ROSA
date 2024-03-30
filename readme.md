@@ -136,12 +136,41 @@ RHEL User: cloud_user
   </em>
 </p>
 
-#16 to add Windows you need to upload an ISO and install from image
-WIP
+#16 to add Windows you need to upload an ISO or obtain an iso URL and install from image
 Obtain Windows ISO here https://www.microsoft.com/en-us/software-download/windows10ISO
-Upload to your ROSA cluster and provision via catalog 
+Download, or select the options until you start the download and use that URL
 
-#17 WIP: Setup Github and deploy VM's and containers by YAML
+Select Create VVM from Template and select Windows 10
+Select boot from CD
+Put in the URL you obtained below from the Windows ISO website 
+this is a 5GB file so upload will take some time, the URL method took about 5min
+
+<p align="left">
+  <a href="#"><img src="./windows10_install.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
+
+<p align="left">
+  <a href="#"><img src="./windows10_rosa.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
+You now have a Windows Image. I fyou performed the prior setup you now have a Hybrid App with Containeres, RHEL, Fedora and Windows 10 images all available. 
+
+<p align="left">
+  <a href="#"><img src="./hybrid_app_rosa2.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
+Direct Link to Windows 10 ISO: https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.iso?t=1182d063-b4cc-4e05-b23b-b0e360f24bef&P1=1711927623&P2=601&P3=2&P4=STgkkfcF8I2W9rpuFC0kO9LrUryOUY8rzB7LPCAya1YuUA56eKW205X624OD6uE%2fkSniKcF5esmiKlzkcEOCPaEz%2b4pEIq%2fONKP%2fzXS7%2bn7e8g%2bXgQmDsecmzWf29%2b%2b0aJNd2fDey2IOxG8o1LrKczfp8P5YlhiODB20CsoUuzkuMzVJNHcy3J7UDzR%2bmSaAM2wacQ11%2f4bD89%2fAnSMsm8yj5xZv3PrvmBrg%2fkPE1LzvSeQbbkLgc5KaOkCilnrbY%2b07UwRl1L3nN%2fMay9fhACdquTOrnlDWNMGkzAuxF9t2Yo1XV7%2bt596dISKNOQZ4xO2CU%2bvXg9Ppht3uWkcuaw%3d%3d
+
+
+#17 WIP: Treating your VM's as code with ArgoCD/Tekton
+Setup Github and deploy VM's and containers by YAML
 Deploy Windows/Linux from YAML with ArgoCD
 https://drive.google.com/file/d/1Em6ZtRtpHR4ed4XJkcq9aNgAxRrx_lrP/view?usp=sharing
 
@@ -153,6 +182,11 @@ https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/pipelines/wi
 
 https://github.com/tosin2013/openshift-virt-tekton-ref
 https://github.com/tosin2013/openshift-virt-tekton-ref/tree/main/docs
+
+
+
+
+
 
 You can also follow these videos by Alan Cowles 
 Virt on ROSA vid 1 Setup New https://www.youtube.com/watch?v=wBtY3tvjtIU
