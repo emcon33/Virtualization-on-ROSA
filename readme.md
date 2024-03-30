@@ -10,7 +10,7 @@ This Workshop assumes you are using a ROSA instance created out of the Red Hat D
 Many of the procedures will work in your account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
 
 <p align="left">
-  <a href="#"><img src="./3_tier_app.jpg" width="600"></a> <br />
+  <a href="#"><img src="./console.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
@@ -24,7 +24,7 @@ https://demo.redhat.com/catalog?item=babylon-catalog-prod/sandboxes-gpte.rosa.pr
 
 Lab Used for this workshop in RHPDS 
 <p align="left">
-  <a href="#"><img src="./labtile.jpg" width="50"></a> <br />
+  <a href="#"><img src="./labtile.jpg" width="100"></a> <br />
   <em> 
   </em>
 </p>
@@ -62,6 +62,11 @@ https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acabm6
 
 #13 You are now up and running with a VM, add it to a project with containers to show a mixed environment. Extract your YAML and use that in a pipeline/gitops etc. 
 
+<p align="left">
+  <a href="#"><img src="./3_tier_app.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
 
 You can also follow these videos by Alan Cowles
 Virt on ROSA vid 1 Setup New
