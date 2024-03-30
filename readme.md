@@ -153,7 +153,7 @@ this is a 5GB file so upload will take some time, the URL method took about 5min
 
 
 <p align="left">
-  <a href="#"><img src="./windows10_rosa.jpg" width="600"></a> <br />
+  <a href="#"><img src="./windows_rosa.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
