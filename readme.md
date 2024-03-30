@@ -2,12 +2,13 @@ This is a quick workshop format demonstration of Red Hat Virtualization on ROSA
 Red Hat OpenShift Virtualization is based on the Kubevirt OpenSource project delivered via HCP
 ROSA is the managed service based on OpenShift delivered as a Managed Service in AWS
 Virtualization on ROSA is the ability to host Virtual Machines inside of Containers on ROSA
+ROSA Overview Video https://www.youtube.com/watch?v=6W-xDavWgYg&t=4s
 
 Joint AWS and Red Hat Blog on Virtualization on ROSA
 https://www.redhat.com/en/blog/managing-virtual-machines-and-containers-as-code-with-openshift-virtualization-on-red-hat-openshift-service-on-aws
 
-This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System for a POC. 
-Many of the procedures will work in your account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
+This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System for a Demo or POC. 
+Many of the procedures will work in any account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
 
 <p align="left">
   <a href="#"><img src="./console.jpg" width="600"></a> <br />
@@ -22,7 +23,7 @@ This uses local EBS storage so live migration is disabled. Delete your lab when 
 https://demo.redhat.com/catalog?item=babylon-catalog-prod/sandboxes-gpte.rosa.prod&utm_source=webapp&utm_medium=share-link
 
 
-Lab Used for this workshop in RHPDS 
+Lab Used for this workshop in RHPDS, avaialble to AWS and Partners, check with your account team for a Level Up Demo 
 <p align="left">
   <a href="#"><img src="./labtile.jpg" width="100"></a> <br />
   <em> 
@@ -114,12 +115,12 @@ RHEL User: cloud_user
   <em> 
   </em>
 
-#12 VM “provisioning” will take about 10min and your up
+#13 VM “provisioning” will take about 10min and your up
 
 
 
 
-#13 You are now up and running with a VM, add it to a project with containers to show a mixed environment. Extract your YAML and use that in a pipeline/gitops etc. 
+#14 You are now up and running with a VM, add it to a project with containers to show a mixed environment. Extract your YAML and use that in a pipeline/gitops etc. 
 
 <p align="left">
   <a href="#"><img src="./fedora_install.jpg" width="600"></a> <br />
@@ -127,28 +128,25 @@ RHEL User: cloud_user
   </em>
 </p>
 
-You can also follow these videos by Alan Cowles
-Virt on ROSA vid 1 Setup New
-Virt on ROSA vid 2 Create VM 
+#15 Associate with your application and you now have a hybrid application of containers and VM's 
 
-Mix with other workloads and do a hybrid app: 
-https://github.com/emcon33/inference-rosa-workshop
+<p align="left">
+  <a href="#"><img src="./hybrid_app_rosa.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
 
-
-
-
+#16 to add Windows you need to upload an ISO and install from image
 WIP
-Get a Windows iso and do a Windows deployment 
-https://www.microsoft.com/en-us/software-download/windows10ISO
+Obtain Windows ISO here https://www.microsoft.com/en-us/software-download/windows10ISO
+Upload to your ROSA cluster and provision via catalog 
 
-Hi Andy, I see you were looking for a Win iso image
-This is what we have on cnv-qe server:
-http://cnv-qe-server.rhos-psi.cnv-qe.rhood.us/files/cnv-tests/windows-images/install_iso/win2022/
-this one is used at least once in our tests: Windows_Server_2022_x64FRE_en-us.iso
-
-
-Deploy from YAML <WIP>
+#17 WIP: Setup Github and deploy VM's and containers by YAML
+Deploy Windows/Linux from YAML with ArgoCD
 https://drive.google.com/file/d/1Em6ZtRtpHR4ed4XJkcq9aNgAxRrx_lrP/view?usp=sharing
+
+Windows Images via ArgoCD 
+https://github.com/OOsemka/gitops-demo/tree/main
 
 Windows VM Pipelines
 https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/pipelines/windows-efi-installer
@@ -156,16 +154,21 @@ https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/pipelines/wi
 https://github.com/tosin2013/openshift-virt-tekton-ref
 https://github.com/tosin2013/openshift-virt-tekton-ref/tree/main/docs
 
-
-GitOps via YAML
-https://medium.com/@tcij1013/deploying-openshift-virtualization-on-red-hat-openshift-on-aws-rosa-847e2440fce4
-
-https://github.com/OOsemka/gitops-demo/tree/main
-
-
-If you wish to test with “Live Motion” and external storage options: 
-Test with FSXN Storage in RHPDS System:Virt ROSA with FSXN Lab
-Test with Pure Portworx on RHPDS System Virt OCP/ROSA w Pure Portworx Lab   
-ODF is not officially supported now but can be. 
+You can also follow these videos by Alan Cowles 
+Virt on ROSA vid 1 Setup New https://www.youtube.com/watch?v=wBtY3tvjtIU
+Virt on ROSA vid 2 Create VM  https://www.youtube.com/watch?v=7EpmmUIhQ7c&t=52s
+Virtualizaiton on ROSA vid 3 import VM https://www.youtube.com/watch?v=5zossjikJm8&t=1s
 
 More Links
+Virtualization on ROSA Learning Path https://cloud.redhat.com/learn/how-manage-virtual-machines-using-red-hat-openshift-virtualization-red-hat-openshift-service
+
+
+Storage Partners required for OpenShift Virtualization Live Motion on ROSA (thanks Mayur Shetty)
+ROSA with FSXN Storage Blog Jan 10, 2024 (external)
+https://www.redhat.com/en/blog/fully-managed-shared-file-storage-for-rosa
+
+Pure Portworx with ROSA Virtualization 
+Light Boards to post: (thanks Mayur Shetty)
+https://www.youtube.com/watch?v=V2kdVwKCId0
+https://www.youtube.com/watch?v=YIEQCZxzoU4
+
