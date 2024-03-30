@@ -3,11 +3,12 @@ Red Hat OpenShift Virtualization is based on the Kubevirt OpenSource project del
 ROSA is the managed service based on OpenShift delivered as a Managed Service in AWS
 Virtualization on ROSA is the ability to host Virtual Machines inside of Containers on ROSA
 ROSA Overview Video https://www.youtube.com/watch?v=6W-xDavWgYg&t=4s
+By Andrew Grimes with videos from Alan Cowles, Jim Garrett and Mayur Shetty 
 
-Joint AWS and Red Hat Blog on Virtualization on ROSA
+Joint AWS and Red Hat Blog on Virtualization on ROSA for the value prop
 https://www.redhat.com/en/blog/managing-virtual-machines-and-containers-as-code-with-openshift-virtualization-on-red-hat-openshift-service-on-aws
 
-This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System for a Demo or POC. 
+This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System (RHPDS) for a Demo or POC. 
 Many of the procedures will work in any account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
 
 <p align="left">
@@ -136,11 +137,13 @@ RHEL User: cloud_user
   </em>
 </p>
 
-#16 to add Windows you need to upload an ISO or obtain an iso URL and install from image
+#16 To add a Window image you need to upload an ISO or obtain an iso URL and install from image
 Obtain Windows ISO here https://www.microsoft.com/en-us/software-download/windows10ISO
-Download, or select the options until you start the download and use that URL
+Download, or select the options until you start the download and use that URL if you want a direct to ROSA
+We are not providing a Windows lic. 
 
-Select Create VVM from Template and select Windows 10
+Steps
+Select Create VVM from Template/catalog and select Windows 10 and options
 Select boot from CD
 Put in the URL you obtained below from the Windows ISO website 
 this is a 5GB file so upload will take some time, the URL method took about 5min
@@ -158,7 +161,7 @@ this is a 5GB file so upload will take some time, the URL method took about 5min
   </em>
 </p>
 
-You now have a Windows Image. I fyou performed the prior setup you now have a Hybrid App with Containeres, RHEL, Fedora and Windows 10 images all available. 
+You now have a Windows Live Image, you can step through the install steps. If you performed the prior setup you now have a Hybrid App with Containeres, RHEL, Fedora and Windows 10 images all available. 
 
 <p align="left">
   <a href="#"><img src="./hybrid_app_rosa2.jpg" width="600"></a> <br />
@@ -183,14 +186,16 @@ https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/pipelines/wi
 https://github.com/tosin2013/openshift-virt-tekton-ref
 https://github.com/tosin2013/openshift-virt-tekton-ref/tree/main/docs
 
+#18 WIP Import a VM into Virtualization on ROSA
 
 
 
 
 
+Supporting Videos: 
 You can also follow these videos by Alan Cowles 
-Virt on ROSA vid 1 Setup New https://www.youtube.com/watch?v=wBtY3tvjtIU
-Virt on ROSA vid 2 Create VM  https://www.youtube.com/watch?v=7EpmmUIhQ7c&t=52s
+Virtualization on ROSA vid 1 Setup New https://www.youtube.com/watch?v=wBtY3tvjtIU
+Virtualization on ROSA vid 2 Create VM  https://www.youtube.com/watch?v=7EpmmUIhQ7c&t=52s
 Virtualizaiton on ROSA vid 3 import VM https://www.youtube.com/watch?v=5zossjikJm8&t=1s
 
 More Links
