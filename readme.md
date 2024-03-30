@@ -68,12 +68,16 @@ https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acabm6
 #8 Create a Hyperconverged instance as well with defaults
 
 <p align="left">
-  <a href="#"><img src="./hyperconverged_add.jpg" width="600"></a> <br />
+  <a href="#"><img src="./hyperconverged_add2.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
 
-#9 Create a linuxvm project under developer
+#9 Create a linuxvm project under developer profile 
+
+#10 Optional: add Container workload to a project if you want a mixed environment demo
+backend: https://github.com/emcon33/inference-rosa-workshop
+frontend:  https://github.com/emcon33/inference-rosa-frontend
 
 #10 Once your machine pool is showing 2/2 you can create a VM
 
