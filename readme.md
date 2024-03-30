@@ -9,10 +9,8 @@ https://www.redhat.com/en/blog/managing-virtual-machines-and-containers-as-code-
 This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System for a POC. 
 Many of the procedures will work in your account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
 
-
-2 Tier Web App 
 <p align="left">
-  <a href="#"><img src="./architecture.jpg" width="600"></a> <br />
+  <a href="#"><img src="./3_tier_app.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
@@ -24,11 +22,25 @@ This uses local EBS storage so live migration is disabled. Delete your lab when 
 https://demo.redhat.com/catalog?item=babylon-catalog-prod/sandboxes-gpte.rosa.prod&utm_source=webapp&utm_medium=share-link
 
 
+Lab Used for this workshop in RHPDS 
+<p align="left">
+  <a href="#"><img src="./architecture.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
 #2 Install with your personal Token for your Red Hat ID or personal ID so you can use the Hybrid Cloud Console Later to "add" workers to your cluster via the Red Hat system. 
 
-#3 Verify cluster install is complete and add token
+#3 Verify cluster install is complete 
 
 #4 Login to the console and then use the link to get to “your” hybrid cloud console, then add to machine pool.  
+
+<p align="left">
+  <a href="#"><img src="./machinepool.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
 
 #5 Use the hybrid cloud console to get to your cluster directly and click machine pool and then add, select metal worker and add 2 with auto scaling setup to 3
 M5.metal is the ideal case. 
