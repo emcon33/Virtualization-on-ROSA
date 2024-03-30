@@ -24,7 +24,7 @@ https://demo.redhat.com/catalog?item=babylon-catalog-prod/sandboxes-gpte.rosa.pr
 
 Lab Used for this workshop in RHPDS 
 <p align="left">
-  <a href="#"><img src="./architecture.jpg" width="600"></a> <br />
+  <a href="#"><img src="./labtile.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
