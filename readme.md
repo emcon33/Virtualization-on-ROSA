@@ -33,13 +33,7 @@ Lab Used for this workshop in RHPDS
 
 #3 Verify cluster install is complete 
 
-#4 Login to the console and then use the link to get to “your” hybrid cloud console, then add to machine pool.  
-
-<p align="left">
-  <a href="#"><img src="./machinepool.jpg" width="600"></a> <br />
-  <em> 
-  </em>
-</p>
+#4 Login to the console and then use the link to get to “your” hybrid cloud console, then add to machine pool.
 
 
 #5 Use the hybrid cloud console to get to your cluster directly and click machine pool and then add, select metal worker and add 2 with auto scaling setup to 3
@@ -47,14 +41,42 @@ M5.metal is the ideal case.
 M5zn.metal is a cheaper option (48vCPU vs 96 vCPU) and half the cost on AWS side
 https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acabm6
 
+<p align="left">
+  <a href="#"><img src="./machinepool_add.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
 
 #6  Check your Console for worker building status it will show “creating”  0/2 until complete. Takes about 45 min. 
 
+<p align="left">
+  <a href="#"><img src="./worker_add_status.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
 
 #7 In parallel,  In the Operator Hub, install “OpenShift Virtualization and take defaults”
-#8 Create a Hypercluster instance as well with defaults
-#9 Create a linuxvm project
+
+<p align="left">
+  <a href="#"><img src="./ROSA_Operator.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
+#8 Create a Hyperconverged instance as well with defaults
+
+<p align="left">
+  <a href="#"><img src="./hyperconverged_add.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
+#9 Create a linuxvm project under developer
+
 #10 Once your machine pool is showing 2/2 you can create a VM
+
 #11 Create a RHEL or Fedora VM as “defaults” in the linuxvm project, save the password to login later. 
 
 #12 VM “provisioning” will take about 10min and your up
