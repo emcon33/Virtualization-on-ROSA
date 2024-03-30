@@ -1,7 +1,7 @@
-* This is a quick workshop format demonstration of Red Hat Virtualization on ROSA
-* Red Hat OpenShift Virtualization is based on the Kubevirt OpenSource project delivered via HCP
-* ROSA is the managed service based on OpenShift delivered as a Managed Service in AWS
-* Virtualization on ROSA is the ability to host Virtual Machines inside of Containers on ROSA
+This is a quick workshop format demonstration of Red Hat Virtualization on ROSA
+Red Hat OpenShift Virtualization is based on the Kubevirt OpenSource project delivered via HCP
+ROSA is the managed service based on OpenShift delivered as a Managed Service in AWS
+Virtualization on ROSA is the ability to host Virtual Machines inside of Containers on ROSA
 
 Joint AWS and Red Hat Blog on Virtualization on ROSA
 https://www.redhat.com/en/blog/managing-virtual-machines-and-containers-as-code-with-openshift-virtualization-on-red-hat-openshift-service-on-aws
