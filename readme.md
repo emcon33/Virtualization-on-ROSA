@@ -49,6 +49,7 @@ https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acabm6
 
 
 #6  Check your Console for worker building status it will show “creating”  0/2 until complete. Takes about 45 min. 
+This is visible under the Admin Main conosole in Compute, Machine Set
 
 <p align="left">
   <a href="#"><img src="./worker_add_status.jpg" width="600"></a> <br />
@@ -79,17 +80,49 @@ https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acabm6
 backend: https://github.com/emcon33/inference-rosa-workshop
 frontend:  https://github.com/emcon33/inference-rosa-frontend
 
-#10 Once your machine pool is showing 2/2 you can create a VM
+#10 When Operatoor is installed, the console will request an update: Refresh to see virt tools
 
-#11 Create a RHEL or Fedora VM as “defaults” in the linuxvm project, save the password to login later. 
+<p align="left">
+  <a href="#"><img src="./update.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
+
+#11 Verify your Workers are installed under Compute, Machine Set, once it is 2/2 you can create a VM. 
+
+#12 Create a RHEL or Fedora VM as “defaults” in the linuxvm project, save the password to login later. 
+By defaul the RHEL, Fedora and CentOS ISO's are included for installation. Windows requires you upload an ISO. 
+Save your password to log into later, it is under optional: 
+Fedora User: fedora
+RHEL User: cloud_user
+
+<p align="left">
+  <a href="#"><img src="./console.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
+<p align="left">
+  <a href="#"><img src="./fedora_create.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
+<p align="left">
+  <a href="#"><img src="./fedora_optional.jpg" width="600"></a> <br />
+  <em> 
+  </em>
 
 #12 VM “provisioning” will take about 10min and your up
+
+
 
 
 #13 You are now up and running with a VM, add it to a project with containers to show a mixed environment. Extract your YAML and use that in a pipeline/gitops etc. 
 
 <p align="left">
-  <a href="#"><img src="./3_tier_app.jpg" width="600"></a> <br />
+  <a href="#"><img src="./fedora_install.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
