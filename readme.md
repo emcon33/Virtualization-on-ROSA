@@ -208,7 +208,21 @@ You an generate the YAML file by doing a grpahical create step and then save the
 #18 WIP Setup ArgoCD and use it to manage the YAML lifecycle of your VM and container deployments. 
 ArgoCD Setup instructions 
 Windows Images via ArgoCD 
-https://github.com/OOsemka/gitops-demo/
+
+Install and Setup ArgoCD on ROSA
+https://docs.openshift.com/container-platform/4.10/cicd/gitops/setting-up-argocd-instance.html
+
+Install Operator
+<p align="left">
+  <a href="#"><img src="./agocd_operator.jpg" width="100"></a> <br />
+  <em> 
+  </em>
+</p>
+
+Setup ArgoCD on ROSA
+
+
+
 
 Windows VM Pipelines
 https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/pipelines/windows-efi-installer
