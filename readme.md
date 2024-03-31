@@ -200,8 +200,15 @@ https://github.com/emcon33/Virtualization-on-ROSA/blob/main/Win2k_install.yaml
 #18 WIP Setup ArgoCD and use it to manage the YAML lifecycle of your VM and container deployments. 
 ArgoCD Setup instructions 
 YAML Samples 
-Windows YAML https://github.com/emcon33/Virtualization-on-ROSA/blob/main/Win2k_install.yaml
-Fedora YAML 
+Windows YAML https://github.com/emcon33/Virtualization-on-ROSA/blob/main/Windows10_create.yaml
+Fedora YAML https://github.com/emcon33/Virtualization-on-ROSA/blob/main/fedora.yaml
+
+Create a windows image by YAML file. 
+<p align="left">
+  <a href="#"><img src="./windows_yaml_create.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
 
 Windows Images via ArgoCD 
 https://github.com/OOsemka/gitops-demo/
