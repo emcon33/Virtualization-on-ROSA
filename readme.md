@@ -193,13 +193,14 @@ https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.is
 
 
 #17 WIP: Treating your VM's as code buy using YAML to deploy images 
-Sample Windows VM YAML 
-https://github.com/OOsemka/gitops-demo/blob/main/win2k19/base/install-iso.yaml
+Sample Windows VM YAML (needs to be tested, may need to update the URL link to work) 
+https://github.com/emcon33/Virtualization-on-ROSA/blob/main/Win2k_install.yaml
+
 
 #18 WIP Setup ArgoCD and use it to manage the YAML lifecycle of your VM and container deployments. 
-ArgoCD Setup
+ArgoCD Setup instructions 
 YAML Samples 
-Windows YAML https://github.com/OOsemka/gitops-demo/blob/main/win2k19/base/install-iso.yaml
+Windows YAML https://github.com/emcon33/Virtualization-on-ROSA/blob/main/Win2k_install.yaml
 Fedora YAML 
 
 Windows Images via ArgoCD 
