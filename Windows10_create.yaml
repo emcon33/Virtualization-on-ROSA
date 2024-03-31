@@ -1,0 +1,262 @@
+﻿apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  annotations:
+    kubemacpool.io/transaction-timestamp: '2024-03-31T16:36:33.206052438Z'
+    vm.kubevirt.io/validations: |
+      [
+        {
+          "name": "minimal-required-memory",
+          "path": "jsonpath::.spec.domain.resources.requests.memory",
+          "rule": "integer",
+          "message": "This VM requires more memory.",
+          "min": 2147483648
+        }, {
+          "name": "windows-virtio-bus",
+          "path": "jsonpath::.spec.domain.devices.disks[*].disk.bus",
+          "valid": "jsonpath::.spec.domain.devices.disks[*].disk.bus",
+          "rule": "enum",
+          "message": "virtio disk bus type has better performance, install virtio drivers in VM and change bus type",
+          "values": ["virtio"],
+          "justWarning": true
+        }, {
+          "name": "windows-disk-bus",
+          "path": "jsonpath::.spec.domain.devices.disks[*].disk.bus",
+          "valid": "jsonpath::.spec.domain.devices.disks[*].disk.bus",
+          "rule": "enum",
+          "message": "disk bus has to be either virtio or sata or scsi",
+          "values": ["virtio", "sata", "scsi"]
+        }, {
+          "name": "windows-cd-bus",
+          "path": "jsonpath::.spec.domain.devices.disks[*].cdrom.bus",
+          "valid": "jsonpath::.spec.domain.devices.disks[*].cdrom.bus",
+          "rule": "enum",
+          "message": "cd bus has to be sata",
+          "values": ["sata"]
+        }
+      ]
+  creationTimestamp: '2024-03-31T16:36:33Z'
+  generation: 1
+  labels:
+    app: win10-famous-pinniped
+    vm.kubevirt.io/template: windows10-desktop-medium
+    vm.kubevirt.io/template.namespace: openshift
+    vm.kubevirt.io/template.revision: '1'
+    vm.kubevirt.io/template.version: v0.25.0
+  managedFields:
+    - apiVersion: kubevirt.io/v1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:annotations':
+            .: {}
+            'f:vm.kubevirt.io/validations': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+            'f:vm.kubevirt.io/template': {}
+            'f:vm.kubevirt.io/template.namespace': {}
+            'f:vm.kubevirt.io/template.revision': {}
+            'f:vm.kubevirt.io/template.version': {}
+        'f:spec':
+          .: {}
+          'f:dataVolumeTemplates': {}
+          'f:running': {}
+          'f:template':
+            .: {}
+            'f:metadata':
+              .: {}
+              'f:annotations':
+                .: {}
+                'f:vm.kubevirt.io/flavor': {}
+                'f:vm.kubevirt.io/os': {}
+                'f:vm.kubevirt.io/workload': {}
+              'f:labels':
+                .: {}
+                'f:kubevirt.io/domain': {}
+                'f:kubevirt.io/size': {}
+            'f:spec':
+              .: {}
+              'f:domain':
+                .: {}
+                'f:clock':
+                  .: {}
+                  'f:timer':
+                    .: {}
+                    'f:hpet':
+                      .: {}
+                      'f:present': {}
+                    'f:hyperv': {}
+                    'f:pit':
+                      .: {}
+                      'f:tickPolicy': {}
+                    'f:rtc':
+                      .: {}
+                      'f:tickPolicy': {}
+                  'f:utc': {}
+                'f:cpu':
+                  .: {}
+                  'f:cores': {}
+                  'f:sockets': {}
+                  'f:threads': {}
+                'f:devices':
+                  .: {}
+                  'f:disks': {}
+                  'f:inputs': {}
+                  'f:interfaces': {}
+                'f:features':
+                  .: {}
+                  'f:acpi': {}
+                  'f:apic': {}
+                  'f:hyperv':
+                    .: {}
+                    'f:frequencies': {}
+                    'f:ipi': {}
+                    'f:reenlightenment': {}
+                    'f:relaxed': {}
+                    'f:reset': {}
+                    'f:runtime': {}
+                    'f:spinlocks':
+                      .: {}
+                      'f:spinlocks': {}
+                    'f:synic': {}
+                    'f:synictimer':
+                      .: {}
+                      'f:direct': {}
+                    'f:tlbflush': {}
+                    'f:vapic': {}
+                    'f:vpindex': {}
+                'f:machine':
+                  .: {}
+                  'f:type': {}
+                'f:resources':
+                  .: {}
+                  'f:requests':
+                    .: {}
+                    'f:memory': {}
+              'f:evictionStrategy': {}
+              'f:networks': {}
+              'f:terminationGracePeriodSeconds': {}
+              'f:volumes': {}
+      manager: kubectl-create
+      operation: Update
+      time: '2024-03-31T16:36:33Z'
+  name: win10-famous-pinniped
+  namespace: linuxvm
+  uid: bf4799e7-e781-4ede-981a-23884b9b7133
+spec:
+  dataVolumeTemplates:
+    - apiVersion: cdi.kubevirt.io/v1beta1
+      kind: DataVolume
+      metadata:
+        annotations:
+          cdi.kubevirt.io/storage.bind.immediate.requested: 'true'
+        creationTimestamp: null
+        name: win10-famous-pinniped
+      spec:
+        source:
+          blank: {}
+        storage:
+          resources:
+            requests:
+              storage: 60Gi
+    - metadata:
+        creationTimestamp: null
+        name: win10-famous-pinniped-installation-cdrom
+      spec:
+        source:
+          http:
+            url: >-
+              https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.iso?t=1182d063-b4cc-4e05-b23b-b0e360f24bef&P1=1711927623&P2=601&P3=2&P4=STgkkfcF8I2W9rpuFC0kO9LrUryOUY8rzB7LPCAya1YuUA56eKW205X624OD6uE%2fkSniKcF5esmiKlzkcEOCPaEz%2b4pEIq%2fONKP%2fzXS7%2bn7e8g%2bXgQmDsecmzWf29%2b%2b0aJNd2fDey2IOxG8o1LrKczfp8P5YlhiODB20CsoUuzkuMzVJNHcy3J7UDzR%2bmSaAM2wacQ11%2f4bD89%2fAnSMsm8yj5xZv3PrvmBrg%2fkPE1LzvSeQbbkLgc5KaOkCilnrbY%2b07UwRl1L3nN%2fMay9fhACdquTOrnlDWNMGkzAuxF9t2Yo1XV7%2bt596dISKNOQZ4xO2CU%2bvXg9Ppht3uWkcuaw%3d%3d
+        storage:
+          resources:
+            requests:
+              storage: 30Gi
+  running: false
+  template:
+    metadata:
+      annotations:
+        vm.kubevirt.io/flavor: medium
+        vm.kubevirt.io/os: windows10
+        vm.kubevirt.io/workload: desktop
+      creationTimestamp: null
+      labels:
+        kubevirt.io/domain: win10-famous-pinniped
+        kubevirt.io/size: medium
+    spec:
+      domain:
+        clock:
+          timer:
+            hpet:
+              present: false
+            hyperv: {}
+            pit:
+              tickPolicy: delay
+            rtc:
+              tickPolicy: catchup
+          utc: {}
+        cpu:
+          cores: 1
+          sockets: 1
+          threads: 1
+        devices:
+          disks:
+            - bootOrder: 2
+              disk:
+                bus: sata
+              name: rootdisk
+            - bootOrder: 1
+              cdrom:
+                bus: sata
+              name: installation-cdrom
+            - cdrom:
+                bus: sata
+              name: windows-drivers-disk
+          inputs:
+            - bus: usb
+              name: tablet
+              type: tablet
+          interfaces:
+            - macAddress: '02:c0:a9:00:00:01'
+              masquerade: {}
+              model: e1000e
+              name: default
+        features:
+          acpi: {}
+          apic: {}
+          hyperv:
+            frequencies: {}
+            ipi: {}
+            reenlightenment: {}
+            relaxed: {}
+            reset: {}
+            runtime: {}
+            spinlocks:
+              spinlocks: 8191
+            synic: {}
+            synictimer:
+              direct: {}
+            tlbflush: {}
+            vapic: {}
+            vpindex: {}
+        machine:
+          type: pc-q35-rhel9.2.0
+        resources:
+          requests:
+            memory: 4Gi
+      evictionStrategy: LiveMigrate
+      networks:
+        - name: default
+          pod: {}
+      terminationGracePeriodSeconds: 3600
+      volumes:
+        - dataVolume:
+            name: win10-famous-pinniped
+          name: rootdisk
+        - dataVolume:
+            name: win10-famous-pinniped-installation-cdrom
+          name: installation-cdrom
+        - containerDisk:
+            image: >-
+              registry.redhat.io/container-native-virtualization/virtio-win-rhel9@sha256:1226b8b5a1768e9a5d40a3a8d2446200664e266cb41912913e160c0058378aba
+          name: windows-drivers-disk
