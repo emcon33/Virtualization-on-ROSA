@@ -194,7 +194,9 @@ https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.is
 
 #17 Treating your VM's as code buy using YAML to deploy images and create from YAML file. 
 Sample Windows VM YAML (needs to be tested, may need to update the URL link to work) 
+
 Windows YAML https://github.com/emcon33/Virtualization-on-ROSA/Windows10_create.yaml
+
 Fedora YAML https://github.com/emcon33/Virtualization-on-ROSA/blob/fedora.yaml
 
 Create a windows image by YAML file, you can use "create vm, YAML template and cut and paste the above into the window and then create. 
@@ -236,8 +238,8 @@ Setup ArgoCD App
 
 
 WIP: Create pipeline for VM creation
+
 WIP: Create VM via ArgoCD
-WIP: 
 
 
 
