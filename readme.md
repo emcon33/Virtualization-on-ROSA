@@ -219,19 +219,20 @@ Install Operator
   </em>
 </p>
 
-Setup ArgoCD on ROSA
-
-
-
-Setup ArgoCD 
+Your Instance will have a default ArgoCD on ROSA namespace under OpenShift Gitops, get your console link to login. 
+Use "use Openshift" to login to your Argo CD Instance
 <p align="left">
-  <a href="#"><img src="./argocd_operator.jpg" width="150"></a> <br />
+  <a href="#"><img src="./argocd_route.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
 
-
-
+Setup ArgoCD App
+<p align="left">
+  <a href="#"><img src="./argocd_app.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
 
 
 
