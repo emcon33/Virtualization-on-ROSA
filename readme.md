@@ -67,7 +67,7 @@ Using the Hybrid Cloud Console use add machine pool to add a supported Bare Meta
 #6 Check your Console for worker building status it will show “creating” 0/2 until complete. Takes about 45 min. 
 This is visible under the Admin Main conosole in Compute, Machine Set. 
 
-Use Compute, Machine Set to check on worker add status. This will take approx 30-45min. 
+On the ROSA Console use Compute, Machine Set to check on worker add status. This will take approx 30-45min. 
 <p align="left">
   <a href="#"><img src="./worker_add_status.jpg" width="600"></a> <br />
   <em> 
@@ -77,7 +77,7 @@ Use Compute, Machine Set to check on worker add status. This will take approx 30
 
 #7 In parallel to the bare metal machine pool, Install OpenShift Virtualization in the Operator Hub, install “OpenShift Virtualization" and take defaults. Install to all accounts. 
 
-Operation Install Method. 
+OpenShift Virtualization Operator Install process is on the ROSA Console.  
 <p align="left">
   <a href="#"><img src="./ROSA_Operator.jpg" width="600"></a> <br />
   <em> 
