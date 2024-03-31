@@ -192,13 +192,18 @@ Here is a Direct Link to Windows 10 64bit English ISO:
 https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.iso?t=1182d063-b4cc-4e05-b23b-b0e360f24bef&P1=1711927623&P2=601&P3=2&P4=STgkkfcF8I2W9rpuFC0kO9LrUryOUY8rzB7LPCAya1YuUA56eKW205X624OD6uE%2fkSniKcF5esmiKlzkcEOCPaEz%2b4pEIq%2fONKP%2fzXS7%2bn7e8g%2bXgQmDsecmzWf29%2b%2b0aJNd2fDey2IOxG8o1LrKczfp8P5YlhiODB20CsoUuzkuMzVJNHcy3J7UDzR%2bmSaAM2wacQ11%2f4bD89%2fAnSMsm8yj5xZv3PrvmBrg%2fkPE1LzvSeQbbkLgc5KaOkCilnrbY%2b07UwRl1L3nN%2fMay9fhACdquTOrnlDWNMGkzAuxF9t2Yo1XV7%2bt596dISKNOQZ4xO2CU%2bvXg9Ppht3uWkcuaw%3d%3d
 
 
-#17 WIP: Treating your VM's as code with ArgoCD/Tekton, buy using YAML to deploy images and map and automate with pipeline hndling. 
-Setup Github and deploy VM's and containers by YAML
-Deploy Windows/Linux from YAML with ArgoCD
-https://drive.google.com/file/d/1Em6ZtRtpHR4ed4XJkcq9aNgAxRrx_lrP/view?usp=sharing
+#17 WIP: Treating your VM's as code buy using YAML to deploy images 
+Sample Windows VM YAML 
+https://github.com/OOsemka/gitops-demo/blob/main/win2k19/base/install-iso.yaml
+
+#18 WIP Setup ArgoCD and use it to manage the YAML lifecycle of your VM and container deployments. 
+ArgoCD Setup
+YAML Samples 
+Windows YAML https://github.com/OOsemka/gitops-demo/blob/main/win2k19/base/install-iso.yaml
+Fedora YAML 
 
 Windows Images via ArgoCD 
-https://github.com/OOsemka/gitops-demo/tree/main
+https://github.com/OOsemka/gitops-demo/
 
 Windows VM Pipelines
 https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/pipelines/windows-efi-installer
@@ -206,9 +211,13 @@ https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/pipelines/wi
 https://github.com/tosin2013/openshift-virt-tekton-ref
 https://github.com/tosin2013/openshift-virt-tekton-ref/tree/main/docs
 
-#18 WIP Import a VM into Virtualization on ROSA
+#19 WIP Import a VM into Virtualization on ROSA. 
+Requires a VMware or VMC environment to pull images out of. 
+Virtualizaiton on ROSA vid 3 import VM https://www.youtube.com/watch?v=5zossjikJm8&t=1s
 
 
+Resource Links: 
+Video setup of much of the above if you want a video source. Thanks Alan Cowles for recording these. 
 Virtualization on ROSA Supporting Videos: 
 You can also follow these videos by Alan Cowles 
 Virtualization on ROSA vid 1 Setup New https://www.youtube.com/watch?v=wBtY3tvjtIU
@@ -216,7 +225,8 @@ Virtualization on ROSA vid 2 Create VM  https://www.youtube.com/watch?v=7EpmmUIh
 Virtualizaiton on ROSA vid 3 import VM https://www.youtube.com/watch?v=5zossjikJm8&t=1s
 
 More Links
-Virtualization on ROSA Learning Path https://cloud.redhat.com/learn/how-manage-virtual-machines-using-red-hat-openshift-virtualization-red-hat-openshift-service
+Virtualization on ROSA Learning Path to get trained on Virtualization on ROSA.
+https://cloud.redhat.com/learn/how-manage-virtual-machines-using-red-hat-openshift-virtualization-red-hat-openshift-service
 
 Storage Partners required for OpenShift Virtualization Live Motion on ROSA (thanks Mayur Shetty)
 ROSA with FSXN Storage Blog Jan 10, 2024 (external)
