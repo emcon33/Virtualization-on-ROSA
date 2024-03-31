@@ -229,7 +229,7 @@ Use "use Openshift" to login to your Argo CD Instance
 
 Setup ArgoCD App
 <p align="left">
-  <a href="#"><img src="./argocd_app.jpg" width="600"></a> <br />
+  <a href="#"><img src="./argocd_app_setup.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
