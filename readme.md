@@ -1,25 +1,28 @@
 This is a quick workshop format demonstration of Red Hat Virtualization on ROSA
-Red Hat OpenShift Virtualization is based on the Kubevirt OpenSource project delivered via HCP
-ROSA is the managed service based on OpenShift delivered as a Managed Service in AWS
-Virtualization on ROSA is the ability to host Virtual Machines inside of Containers on ROSA
+Red Hat OpenShift Virtualization is based on the Kubevirt OpenSource project delivered via 
+ROSA. ROSA is the joint AWS and Red Hat managed service based on OpenShift delivered as a console service in AWS. 
+Virtualization on ROSA gives you the ability to host Virtual Machines of Linux and Windows with Containers on ROSA. 
+
 ROSA Overview Video https://www.youtube.com/watch?v=6W-xDavWgYg&t=4s
 By Andrew Grimes with videos from Alan Cowles, Jim Garrett and Mayur Shetty 
 
 Joint AWS and Red Hat Blog on Virtualization on ROSA for the value prop
 https://www.redhat.com/en/blog/managing-virtual-machines-and-containers-as-code-with-openshift-virtualization-on-red-hat-openshift-service-on-aws
 
-This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System (RHPDS) for a Demo or POC. 
-Many of the procedures will work in any account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
+This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System (RHPDS) for a Demo or POC. We use EBS local storage so live migration is not supported with EBS Storage. We support other storage services and will support more partner services in the future if live migration, hybrid use cases or data protection integraiton is required. These procedures are optimized for RHPDS demo system but the procedures should work in any account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
 
+Virtualization on ROSA
 <p align="left">
   <a href="#"><img src="./console.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
 
-Quick Virtualization on ROSA Install and Setup for a Basic Demo
+Instructions and Links for a quick Virtualization on ROSA Install and Setup for a Basic Demo
 This uses local EBS storage so live migration is disabled. Delete your lab when not in use as the VM’s can be expensive. 
+The AWS FSXN service with NFS as well as Pure Portworx are also supported options. ODF is planned for a future release. 
 
+Follow these steps oonce you have RHPDS access. 
 #1 Use a Basic ROSA Cluster via RHPDS or installed in single AZ (2 workers) 
 https://demo.redhat.com/catalog?item=babylon-catalog-prod/sandboxes-gpte.rosa.prod&utm_source=webapp&utm_medium=share-link
 
