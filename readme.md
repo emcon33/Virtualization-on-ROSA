@@ -37,11 +37,12 @@ Lab Used for this workshop in RHPDS, avaialble to AWS and Partners, check with y
   </em>
 </p>
 
-#2 Using your Red Hat ID, collect your console token for your Red Hat ID, and Install with your personal Token so you can use the Hybrid Cloud Console Later to "add" workers to your cluster via the Red Hat system. 
+#2 Using your Red Hat ID, collect your console token for your Red Hat ID, and Install with your personal Token so you can use the Hybrid Cloud Console Later to "add" workers to your cluster via the Red Hat system. https://console.redhat.com/openshift/token/rosa
 
 #3 Verify cluster install is complete by logging onto the console and checking status. CLI is not required but we do recommend using VS Code with the OpenShift plugin to update configuration files. 
 
-#4 Login to the console and then use the link included to get to “your” hybrid cloud console via token access, then add supported metal workers to the machine pool. Only metal workers are supported for VM creation on ROSA. 
+#4 Login to the console and then use the link included to get to “your” hybrid cloud console via token access, then add supported metal workers to the machine pool. Only metal workers are supported for VM creation on ROSA. Red Hat Hybrid Cloud Console, (use the link off your ROSA console is the preferred way to get your cluster but here is the direct link. 
+https://console.redhat.com/openshift/
 
 
 #5 Use the hybrid cloud console to get to your cluster directly and click machine pool and then add, select metal worker and add 2 with auto scaling setup to 3 M5.metal is the ideal case. 
