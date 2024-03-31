@@ -13,7 +13,7 @@ https://www.redhat.com/en/blog/managing-virtual-machines-and-containers-as-code-
 
 This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System (RHPDS) for a Demo or POC. We use EBS local storage so live migration is not supported with EBS Storage. We support other storage services and will support more partner services in the future if live migration, hybrid use cases or data protection integraiton is required. These procedures are optimized for RHPDS demo system but the procedures should work in any account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
 
-Virtualization on ROSA Catalog 
+Virtualization on ROSA Catalog. 
 <p align="left">
   <a href="#"><img src="./console.jpg" width="600"></a> <br />
   <em> 
@@ -30,7 +30,7 @@ The below steps "assumes" you have RHPDs access to the ROSA Open Lab setup to ex
 https://demo.redhat.com/catalog?item=babylon-catalog-prod/sandboxes-gpte.rosa.prod&utm_source=webapp&utm_medium=share-link
 
 
-Lab Used for this workshop in RHPDS, avaialble to AWS and Partners, check with your account team for a Level Up Demo 
+Lab Used for this workshop in RHPDS, avaialble to AWS and Partners, check with your account team for a Level Up Demo. 
 <p align="left">
   <a href="#"><img src="./labtile.jpg" width="200"></a> <br />
   <em> 
@@ -49,6 +49,7 @@ Lab Used for this workshop in RHPDS, avaialble to AWS and Partners, check with y
 M5zn.metal is a cheaper option (48vCPU vs 96 vCPU) and half the cost on AWS side
 The full list is here https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acabm6
 
+Using the Hybrid Cloud Console use add machine pool to add a supported Bare Metal Worker. 
 <p align="left">
   <a href="#"><img src="./machinepool_add.jpg" width="600"></a> <br />
   <em> 
@@ -59,6 +60,7 @@ The full list is here https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acab
 #6 Check your Console for worker building status it will show “creating” 0/2 until complete. Takes about 45 min. 
 This is visible under the Admin Main conosole in Compute, Machine Set. 
 
+Use Compute, Machine Set to check on worker add status. This will take approx 30-45min. 
 <p align="left">
   <a href="#"><img src="./worker_add_status.jpg" width="600"></a> <br />
   <em> 
@@ -68,6 +70,7 @@ This is visible under the Admin Main conosole in Compute, Machine Set.
 
 #7 In parallel to the bare metal machine pool, Install OpenShift Virtualization in the Operator Hub, install “OpenShift Virtualization" and take defaults. Install to all accounts. 
 
+Operation Install Method. 
 <p align="left">
   <a href="#"><img src="./ROSA_Operator.jpg" width="600"></a> <br />
   <em> 
@@ -76,6 +79,7 @@ This is visible under the Admin Main conosole in Compute, Machine Set.
 
 #8 Create a Hyperconverged instance as well with defaults in the CNV namespace. Once complete this will trigger a reload of the console to make the "Virtualization" menu visible. 
 
+Add HyperConverged Space to the Operator to deploy VM's. 
 <p align="left">
   <a href="#"><img src="./hyperconverged_add2.jpg" width="600"></a> <br />
   <em> 
@@ -90,6 +94,7 @@ Deploy frontend:  https://github.com/emcon33/inference-rosa-frontend
 
 #10 When OpenShift Virtualization Operator is installed, the console will request an update: Refresh to see virt tools show up in the side menu. Verify they are visible and avaialable. 
 
+This banner will appear once the Operator and Hyperconverged space is installed. 
 <p align="left">
   <a href="#"><img src="./update.jpg" width="600"></a> <br />
   <em> 
@@ -104,21 +109,21 @@ By defaul the RHEL, Fedora and CentOS ISO's are included for installation. Windo
 The default user name for RHEL and Fedora are  
 Fedora Default User: "fedora" & RHEL Default User: "cloud_user"
 
-Console Catalog of Virtualization Services
+Console Catalog of Virtualization Services. 
 <p align="left">
   <a href="#"><img src="./console.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
 
-Default Fedora Creation Panel 
+Default Fedora Creation Panel.  
 <p align="left">
   <a href="#"><img src="./fedora_create.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
 
-Fedora Optional Install panel with install password
+Fedora Optional Install panel with install password. 
 <p align="left">
   <a href="#"><img src="./fedora_optional.jpg" width="600"></a> <br />
   <em> 
@@ -130,7 +135,7 @@ Fedora Optional Install panel with install password
 
 #14 You are now up and running with a VM, add it to the app space with containers to show a mixed environment. Extract your YAML and use that in a pipeline/gitops etc. 
 
-Fedora Install look with console 
+Fedora Install look with console. 
 <p align="left">
   <a href="#"><img src="./fedora_install.jpg" width="600"></a> <br />
   <em> 
@@ -139,7 +144,7 @@ Fedora Install look with console
 
 #15 You can associate the VM with your application grouping and you now have a hybrid application of containers and VM's 
 
-Hybrid App of VM's and Containers 
+Hybrid App of VM's and Containers. 
 <p align="left">
   <a href="#"><img src="./hybrid_app_rosa.jpg" width="600"></a> <br />
   <em> 
