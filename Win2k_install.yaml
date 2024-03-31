@@ -1,0 +1,19 @@
+apiVersion: cdi.kubevirt.io/v1beta1
+kind: DataVolume
+metadata:
+  annotations:
+    cdi.kubevirt.io/storage.bind.immediate.requested: "true"
+    kubevirt.ui/provider: Microsoft
+  name: windows10-install-iso
+  namespace: kubevirt-gitops
+spec:
+  pvc:
+    accessModes:
+    - ReadWriteOnce
+    resources:
+      requests:
+        storage: 6Gi
+    volumeMode: Filesystem
+  source:
+    http:
+      url: https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.iso?t=1182d063-b4cc-4e05-b23b-b0e360f24bef&P1=1711927623&P2=601&P3=2&P4=STgkkfcF8I2W9rpuFC0kO9LrUryOUY8rzB7LPCAya1YuUA56eKW205X624OD6uE%2fkSniKcF5esmiKlzkcEOCPaEz%2b4pEIq%2fONKP%2fzXS7%2bn7e8g%2bXgQmDsecmzWf29%2b%2b0aJNd2fDey2IOxG8o1LrKczfp8P5YlhiODB20CsoUuzkuMzVJNHcy3J7UDzR%2bmSaAM2wacQ11%2f4bD89%2fAnSMsm8yj5xZv3PrvmBrg%2fkPE1LzvSeQbbkLgc5KaOkCilnrbY%2b07UwRl1L3nN%2fMay9fhACdquTOrnlDWNMGkzAuxF9t2Yo1XV7%2bt596dISKNOQZ4xO2CU%2bvXg9Ppht3uWkcuaw%3d%3d
