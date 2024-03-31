@@ -214,7 +214,7 @@ https://docs.openshift.com/container-platform/4.10/cicd/gitops/setting-up-argocd
 
 Install Operator
 <p align="left">
-  <a href="#"><img src="./argocd_operator.jpg" width="150"></a> <br />
+  <a href="#"><img src="./argocd_operator.jpg" width="200"></a> <br />
   <em> 
   </em>
 </p>
@@ -222,18 +222,22 @@ Install Operator
 Your Instance will have a default ArgoCD on ROSA namespace under OpenShift Gitops, get your console link to login. 
 Use "use Openshift" to login to your Argo CD Instance
 <p align="left">
-  <a href="#"><img src="./argocd_route.jpg" width="600"></a> <br />
+  <a href="#"><img src="./argocd_route.jpg" width="800"></a> <br />
   <em> 
   </em>
 </p>
 
 Setup ArgoCD App
 <p align="left">
-  <a href="#"><img src="./argocd_app_setup.jpg" width="600"></a> <br />
+  <a href="#"><img src="./argocd_app_setup.jpg" width="800"></a> <br />
   <em> 
   </em>
 </p>
 
+
+WIP: Create pipeline for VM creation
+WIP: Create VM via ArgoCD
+WIP: 
 
 
 
