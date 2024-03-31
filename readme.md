@@ -192,24 +192,21 @@ Here is a Direct Link to Windows 10 64bit English ISO:
 https://software.download.prss.microsoft.com/dbazure/Win10_22H2_English_x64v1.iso?t=1182d063-b4cc-4e05-b23b-b0e360f24bef&P1=1711927623&P2=601&P3=2&P4=STgkkfcF8I2W9rpuFC0kO9LrUryOUY8rzB7LPCAya1YuUA56eKW205X624OD6uE%2fkSniKcF5esmiKlzkcEOCPaEz%2b4pEIq%2fONKP%2fzXS7%2bn7e8g%2bXgQmDsecmzWf29%2b%2b0aJNd2fDey2IOxG8o1LrKczfp8P5YlhiODB20CsoUuzkuMzVJNHcy3J7UDzR%2bmSaAM2wacQ11%2f4bD89%2fAnSMsm8yj5xZv3PrvmBrg%2fkPE1LzvSeQbbkLgc5KaOkCilnrbY%2b07UwRl1L3nN%2fMay9fhACdquTOrnlDWNMGkzAuxF9t2Yo1XV7%2bt596dISKNOQZ4xO2CU%2bvXg9Ppht3uWkcuaw%3d%3d
 
 
-#17 WIP: Treating your VM's as code buy using YAML to deploy images 
+#17 Treating your VM's as code buy using YAML to deploy images and create from YAML file. 
 Sample Windows VM YAML (needs to be tested, may need to update the URL link to work) 
-https://github.com/emcon33/Virtualization-on-ROSA/blob/main/Win2k_install.yaml
+Windows YAML https://github.com/emcon33/Virtualization-on-ROSA/Windows10_create.yaml
+Fedora YAML https://github.com/emcon33/Virtualization-on-ROSA/blob/fedora.yaml
 
-
-#18 WIP Setup ArgoCD and use it to manage the YAML lifecycle of your VM and container deployments. 
-ArgoCD Setup instructions 
-YAML Samples 
-Windows YAML https://github.com/emcon33/Virtualization-on-ROSA/blob/main/Windows10_create.yaml
-Fedora YAML https://github.com/emcon33/Virtualization-on-ROSA/blob/main/fedora.yaml
-
-Create a windows image by YAML file. 
+Create a windows image by YAML file, you can use "create vm, YAML template and cut and paste the above into the window and then create. 
+You an generate the YAML file by doing a grpahical create step and then save the YAML to a file. 
 <p align="left">
   <a href="#"><img src="./windows_yaml_create.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
 
+#18 WIP Setup ArgoCD and use it to manage the YAML lifecycle of your VM and container deployments. 
+ArgoCD Setup instructions 
 Windows Images via ArgoCD 
 https://github.com/OOsemka/gitops-demo/
 
