@@ -235,7 +235,7 @@ Setup ArgoCD App
   <em> 
   </em>
 </p>
-
+https://argo-cd.readthedocs.io/en/stable/getting_started/
 
 WIP: Create pipeline for VM creation
 
