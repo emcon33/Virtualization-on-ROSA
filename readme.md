@@ -214,12 +214,24 @@ https://docs.openshift.com/container-platform/4.10/cicd/gitops/setting-up-argocd
 
 Install Operator
 <p align="left">
-  <a href="#"><img src="./argocd_operator.jpg" width="100"></a> <br />
+  <a href="#"><img src="./argocd_operator.jpg" width="150"></a> <br />
   <em> 
   </em>
 </p>
 
 Setup ArgoCD on ROSA
+
+
+
+Setup ArgoCD 
+<p align="left">
+  <a href="#"><img src="./argocd_operator.jpg" width="150"></a> <br />
+  <em> 
+  </em>
+</p>
+
+
+
 
 
 
