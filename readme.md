@@ -39,13 +39,10 @@ Lab Used for this workshop in RHPDS, avaialble to AWS and Partners, check with y
 
 #2 Using your Red Hat ID, collect your console token for your Red Hat ID, and Install with your personal Token so you can use the Hybrid Cloud Console Later to "add" workers to your cluster via the Red Hat system. https://console.redhat.com/openshift/token/rosa
 
-#3 Verify cluster install is complete by logging onto the console and checking status. CLI is not required but we do recommend using VS Code with the OpenShift plugin to update configuration files. 
+#3 Verify cluster install is complete by logging onto the ROSA console and checking status. CLI is not required but we do recommend using VS Code with the OpenShift plugin to update configuration files. 
 
-#4 Login to the console and then use the link included to get to “your” hybrid cloud console via token access, then add supported metal workers to the machine pool. Only metal workers are supported for VM creation on ROSA. Red Hat Hybrid Cloud Console, (use the link off your ROSA console is the preferred way to get your cluster but here is the direct link. 
+#4 Login to the ROSA console and then use the Cluster Manager link to get to “your” hybrid cloud console via token access. If you didn't use a token, your access won't work. The Red Hat Hybrid Cloud Console supports maintenance activity and allows you to "add" workers to your cluster. (use the link off your ROSA console is the preferred way to get your cluster but here is the direct link. 
 https://console.redhat.com/openshift/
-
-
-#5 Use the hybrid cloud console to get to your cluster directly and click machine pool and then add, select metal worker and add 2 with auto scaling setup to 3 M5.metal is the ideal case. 
 
 Your ROSA console will have this link on the home page to directly link to the cluster manager where you can add your machine pool for bare metal workers.  
 <p align="left">
@@ -53,6 +50,8 @@ Your ROSA console will have this link on the home page to directly link to the c
   <em> 
   </em>
 </p>
+
+#5 Use the hybrid cloud console to get to your cluster directly and click machine pool and then add, select metal worker and add 2 with auto scaling setup to 3 M5.metal is the ideal case. 
 
 M5zn.metal is a cheaper option (48vCPU vs 96 vCPU) and half the cost on AWS side
 The full list is here https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acabm6
