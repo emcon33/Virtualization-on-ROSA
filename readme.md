@@ -47,6 +47,13 @@ https://console.redhat.com/openshift/
 
 #5 Use the hybrid cloud console to get to your cluster directly and click machine pool and then add, select metal worker and add 2 with auto scaling setup to 3 M5.metal is the ideal case. 
 
+Your ROSA console will have this link on the home page to directly link to the cluster manager where you can add your machine pool for bare metal workers.  
+<p align="left">
+  <a href="#"><img src="./console_hybrid.jpg" width="200"></a> <br />
+  <em> 
+  </em>
+</p>
+
 M5zn.metal is a cheaper option (48vCPU vs 96 vCPU) and half the cost on AWS side
 The full list is here https://aws.amazon.com/marketplace/pp/prodview-tnyp2h3acabm6
 
