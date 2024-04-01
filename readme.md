@@ -11,7 +11,7 @@ Basic ROSA Overview Video https://www.youtube.com/watch?v=6W-xDavWgYg&t=4s
 Joint AWS and Red Hat Blog on Virtualization on ROSA for the value prop
 https://www.redhat.com/en/blog/managing-virtual-machines-and-containers-as-code-with-openshift-virtualization-on-red-hat-openshift-service-on-aws
 
-Get Hands on with ROSA for Free
+Get Hands on with ROSA for Free for 8 hours from the Cluster Management Console of your Red Hat account (for customers) 
 https://console.redhat.com/openshift/overview/rosa/hands-on
 
 Hands on ROSA experience request form:  
