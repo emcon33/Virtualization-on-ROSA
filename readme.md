@@ -11,6 +11,16 @@ Basic ROSA Overview Video https://www.youtube.com/watch?v=6W-xDavWgYg&t=4s
 Joint AWS and Red Hat Blog on Virtualization on ROSA for the value prop
 https://www.redhat.com/en/blog/managing-virtual-machines-and-containers-as-code-with-openshift-virtualization-on-red-hat-openshift-service-on-aws
 
+Get Hands on with ROSA for Free
+https://console.redhat.com/openshift/overview/rosa/hands-on
+
+Hands on ROSA experience request form:  
+<p align="left">
+  <a href="#"><img src="./ROSA_Hands_on_Experience.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
 This Workshop assumes you are using a ROSA instance created out of the Red Hat Demonstration System (RHPDS) for a Demo or POC. We use EBS local storage so live migration is not supported with EBS Storage. We support other storage services and will support more partner services in the future if live migration, hybrid use cases or data protection integraiton is required. These procedures are optimized for RHPDS demo system but the procedures should work in any account context if needed. Please note we require "bare metal" workers for ROSA to work and those are more expensive than regular EC2 Instances so we suggest setting cost alerts on your account and shutting down the workshop when not in use. 
 
 Virtualization on ROSA Catalog. 
