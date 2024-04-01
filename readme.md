@@ -16,7 +16,7 @@ https://console.redhat.com/openshift/overview/rosa/hands-on
 
 Hands on ROSA experience request form:  
 <p align="left">
-  <a href="#"><img src="./ROSA_Hands_on_Experience.jpg" width="600"></a> <br />
+  <a href="#"><img src="./ROSA_Hands_On_Experience.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
