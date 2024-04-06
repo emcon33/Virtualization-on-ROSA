@@ -263,7 +263,8 @@ https://github.com/kubevirt/kubevirt-tekton-tasks/tree/main/release/pipelines/wi
 https://github.com/tosin2013/openshift-virt-tekton-ref
 https://github.com/tosin2013/openshift-virt-tekton-ref/tree/main/docs
 
-
+Manage a VM with ArgoCD on OpenShift Virtualization with ACM
+https://www.youtube.com/watch?v=37Lqe0Vdkcc&t=890s
 
 #19 WIP Import a VM into Virtualization on ROSA
 (this requires a vSphere or VMC cluster image to import by MTV)
