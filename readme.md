@@ -276,6 +276,14 @@ MTV Migration tool overview: https://www.youtube.com/watch?v=Fid24-qHHtU
 
 VM migration to OCP-Virt and Ansible https://www.youtube.com/watch?v=GZFhJerI9bo
 
+Ansible VM management in OpenShift Virtualization on ROSA
+
+<p align="left">
+  <a href="#"><img src="./cloud_ansible_vm.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
 
 Partner Solutions that work with ROSA, subject to partner support statements and documentation 
 Virtual Machines create a highly persistent image inside a K8s cluster that typically works to abstract out unique elements from a container. This will often bring up the need for cross AZ replication and backup of images to avoid loss of a stateful OS Image with all associated application elements. Red Hat has several ecosystem partners that assist with data proteciton of VM's. Live Migration of VM's also works with storage partners though local EBS is supported. Here is a sample of the Ecosystem Partners that work with Virtualization on ROSA. 
