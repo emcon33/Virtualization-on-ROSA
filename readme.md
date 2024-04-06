@@ -267,17 +267,23 @@ https://github.com/tosin2013/openshift-virt-tekton-ref/tree/main/docs
 
 #19 WIP Import a VM into Virtualization on ROSA
 (this requires a vSphere or VMC cluster image to import by MTV)
+
 Virtualizaiton on ROSA vid 3 import VM https://www.youtube.com/watch?v=5zossjikJm8&t=1s
+
 MTV Migration tool overview: https://www.youtube.com/watch?v=Fid24-qHHtU
 
 #20 WIP: Ansible Automaing VM Management on OCP-Virt (applies to ROSA)
+
 VM migration to OCP-Virt and Ansible https://www.youtube.com/watch?v=GZFhJerI9bo
 
 
+Partner Solutions that work with ROSA, subject to partner support statements and documentation 
 Virtual Machines create a highly persistent image inside a K8s cluster that typically works to abstract out unique elements from a container. This will often bring up the need for cross AZ replication and backup of images to avoid loss of a stateful OS Image with all associated application elements. Red Hat has several ecosystem partners that assist with data proteciton of VM's. Live Migration of VM's also works with storage partners though local EBS is supported. Here is a sample of the Ecosystem Partners that work with Virtualization on ROSA. 
 
 #21 Eco Partner Data Protection: Trelio Data Protection
+
 Backup VM https://www.youtube.com/watch?v=lhXuW2ERKiA
+
 Restore VM https://www.youtube.com/watch?v=IGeDT0sNu-Q
 
 #22 Eco Partner: Kasten Veeam Data Protection 
@@ -285,13 +291,17 @@ Protecting VM's on OCP-Virt: https://www.youtube.com/watch?v=WZBS9mU_kSg
 
 
 #23 Eco Partner: Storage Option Pure Portworx Storage and Data Protection 
-https://www.purestorage.com/content/dam/pdf/en/white-papers/wp-portworx-redhat-openshift-aws.pdf
+Pure Portworx and ROSA Doc. https://www.purestorage.com/content/dam/pdf/en/white-papers/wp-portworx-redhat-openshift-aws.pdf
+
 Pure Portworx Setup for Storage with Live Migration: https://www.youtube.com/watch?v=V2kdVwKCId0
+
 Pure Portworx Data Protection with Virtualization on ROSA: https://www.youtube.com/watch?v=YIEQCZxzoU4
 
 
 #24 Eco Partner: AWS FSXN supoprt for NFS storage and migration
+
 File Services with FSXN: https://www.redhat.com/en/blog/fully-managed-shared-file-storage-for-rosa
+
 https://docs.netapp.com/us-en/netapp-solutions/rhhc/rhhc-solutions.html#scenario-3-data-protection-and-migration-from-the-on-premises-environment-to-aws-environment
 
 
