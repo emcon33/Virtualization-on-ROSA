@@ -229,7 +229,9 @@ ArgoCD Setup instructions
 Windows Images via ArgoCD 
 
 Install and Setup ArgoCD on ROSA
-https://docs.openshift.com/container-platform/4.10/cicd/gitops/setting-up-argocd-instance.html
+ArgoCD Setup Blog: https://github.com/siamaksade/openshift-gitops-getting-started
+
+ArgoCD Documentation: https://docs.openshift.com/container-platform/4.10/cicd/gitops/setting-up-argocd-instance.html
 
 Install Operator
 <p align="left">
