@@ -1,0 +1,10 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: datavolumes
+spec:
+  destination:
+    namespace: openshift-virtualization-os-images
+  project: default
+  source:
+    path: fedora-volumes

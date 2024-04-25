@@ -1,0 +1,10 @@
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kubevirt-os-images
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: kubevirt-gitops

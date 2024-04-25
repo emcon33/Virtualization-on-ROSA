@@ -1,0 +1,21 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+
+metadata:
+  name: datavolumes
+  namespace: openshift-gitops
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+spec:
+  destination:
+    namespace: kubevirt-os-images
+    server: https://kubernetes.default.svc
+  project: default
+  source:
+    path: fedora-volumes
+    repoURL: https://github.com/dharmesh-b/fedora-vm-argocd-sample.git
+    targetRevision: HEAD
+  syncPolicy:
+    automated: {}
+    syncOptions:
+    - CreateNamespace=true
