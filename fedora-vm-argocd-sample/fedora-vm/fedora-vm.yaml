@@ -1,0 +1,95 @@
+apiVersion: kubevirt.io/v1
+kind: VirtualMachine
+metadata:
+  annotations:
+    vm.kubevirt.io/validations: |
+      [
+        {
+          "name": "minimal-required-memory",
+          "path": "jsonpath::.spec.domain.resources.requests.memory",
+          "rule": "integer",
+          "message": "This VM requires more memory.",
+          "min": 1073741824
+        }
+      ]
+  labels:
+    app: fedora-gitops1
+    vm.kubevirt.io/template: fedora-server-small
+    vm.kubevirt.io/template.namespace: openshift
+    vm.kubevirt.io/template.revision: "1"
+    vm.kubevirt.io/template.version: v0.26.0
+  name: fedora-gitops1
+spec:
+  dataVolumeTemplates:
+  - apiVersion: cdi.kubevirt.io/v1beta1
+    kind: DataVolume
+    metadata:
+      name: fedora-gitops1
+    spec:
+      pvc:
+        volumeMode: Block
+        accessModes:
+        - ReadWriteOnce
+        resources:
+          requests:
+            storage: 30Gi
+      source:
+        pvc:
+          name: fedora-custom
+          #name: fedora
+          #name: fedora-722ac1d6b4f1
+          #namespace: openshift-virtualization-os-images
+          namespace: kubevirt-os-images
+  running: true
+  template:
+    metadata:
+      annotations:
+        vm.kubevirt.io/flavor: small
+        vm.kubevirt.io/os: fedora
+        vm.kubevirt.io/workload: server
+      labels:
+        kubevirt.io/domain: fedora-gitops1
+        kubevirt.io/size: small
+    spec:
+      domain:
+        cpu:
+          cores: 4
+          sockets: 1
+          threads: 1
+        devices:
+          disks:
+          - disk:
+              bus: virtio
+            name: fedora-gitops1
+          - disk:
+              bus: virtio
+            name: cloudinitdisk
+          interfaces:
+          - masquerade: {}
+            model: virtio
+            name: default
+          networkInterfaceMultiqueue: true
+          rng: {}
+        machine:
+          type: pc-q35-rhel9.2.0
+        resources:
+          requests:
+            memory: 4Gi
+      evictionStrategy: LiveMigrate
+      networks:
+      - name: default
+        pod: {}
+      terminationGracePeriodSeconds: 180
+      volumes:
+      - dataVolume:
+          name: fedora-gitops1
+        name: fedora-gitops1
+      - cloudInitConfigDrive:
+          userData: |-
+            #cloud-config
+            user: fedora
+            password: Redhat@123
+            chpasswd: { expire: False }
+            ssh_authorized_keys:
+            - ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCtvdYw+25qic4Fn8nsnKHQsRbB/ybxRDxPEMwURIBT5dnPfq1Dy4xZ+XmseZS9qqJwiHkilQU3s268bEios6cASa37XgfTb84ZdjWZa9WeBxCg267DZKAuwu+vzx3H4xCPxs79WJwVM2AtzaZi6j5KQcXqit1NDy8iK/0b4AhU5Vpr7hmhk8qD4xvn4wW6K5mi1jI6RUEyZZj8K+jvCItUEK+kKh/9sAOqPSY3qQxbadwVI6QoDC0e26H7gNhfEnP68Rv5/Pr5/DlpIv7APfpXKpgX583JdsFyhZsApxI9a363hNvfQ3ETz8r0qOEvs/ESyfvf8tlyc2/0phu0gp5I0uyEOpmH9C9Kb/i1FshaPRB8nrsDDhzxjMYS0EhdCdIHG1VB4SdANmXrECT/yR+1UCwuBq4x+z8UuHfNseYHzrj+mkLLAU9nD7gAsAGJCsXcoR5k58KA9xSSC0nyRC1fIeQ92dDEkW+tSSXoiGWMrVRaJI1E90E+pXAaB0bVVT8= fedora@fedora-gitops1
+        name: cloudinitdisk

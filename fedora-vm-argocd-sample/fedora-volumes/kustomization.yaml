@@ -1,0 +1,4 @@
+resources:
+- fedora-custom.yaml
+commonAnnotations:
+  cdi.kubevirt.io/storage.deleteAfterCompletion: "false"
