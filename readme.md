@@ -160,7 +160,9 @@ Hybrid App of VM's and Containers.
 </p>
 
 #16 For a Windows image, you need to upload an ISO or obtain an iso URL and install from image using defaults. 
-Obtain Windows ISO here https://www.microsoft.com/en-us/software-download/windows10ISO
+Obtain Windows 10 ISO here https://www.microsoft.com/en-us/software-download/windows10ISO
+Obtain Windows 11 ISO here https://www.microsoft.com/software-download/windows11
+
 Download, or select the options until you start the download and use that URL if you want a direct to ROSA
 We are not providing a Windows lic. 
 
