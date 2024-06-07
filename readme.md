@@ -175,12 +175,20 @@ Select boot from CD
 Put in the URL you obtained below from the Windows ISO website 
 this is a 5GB file so upload will take some time, the URL method took about 5min
 
-Windows 10 Setup will look like this. 
+Windows 10 Setup will look like this on ROSA Classic 4.14.x 
 <p align="left">
   <a href="#"><img src="./windows10_install.jpg" width="600"></a> <br />
   <em> 
   </em>
 </p>
+
+Windows 10 Setup will look like this on ROSA HCP 4.15.14 
+<p align="left">
+  <a href="#"><img src="./Windows_create_iso.jpg" width="600"></a> <br />
+  <em> 
+  </em>
+</p>
+
 
 Windows on ROSA deployed with console access. 
 <p align="left">
