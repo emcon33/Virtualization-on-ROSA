@@ -3,6 +3,8 @@ Red Hat OpenShift Virtualization is based on the Kubevirt OpenSource project del
 ROSA is the joint AWS and Red Hat managed service based on OpenShift delivered as a console service in AWS. 
 Virtualization on ROSA gives you the ability to host Virtual Machines of Linux and Windows with Containers on ROSA. 
 By Andrew Grimes with videos from Alan Cowles, Jim Garrett and Mayur Shetty 
+Verified Working  01/26/25
+No Longer Maintained 
 
 
 Basic ROSA Overview Video https://www.youtube.com/watch?v=6W-xDavWgYg&t=4s
